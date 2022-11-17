@@ -102,15 +102,17 @@
     <script src="~/assets/js/material-dashboard.min.js?v=3.0.0"></script>
     <partial name="_ValidationScriptsPartial" />
     <script>
-        let mensagenErro = '';
+        let mensagemErro = '';
         $(".validation-summary-errors ul li").each(function () {
-            mensagenErro += $(this).text() + '<br/>';
+            mensagemErro += $(this).text() + '<br/>';
         });
-        if (mensagenErro != '') {
+        if (mensagemErro != '') {
+
+            $('#Input_Email').focus();
             Swal.fire({
                 icon: 'error',
-                title: 'Problemas ao entrar',
-                html: mensagenErro,
+                title: 'Problema ao entrar',
+                html: mensagemErro,
             });
         }
     </script>
